@@ -38,19 +38,22 @@ public class Test {
 			}
 			
 		}
-		System.out.println("两个文件总共的词汇表有：");
+		System.out.print("两个文件总共的词汇表有：");
 		for(String key : map.keySet()) {
-			System.out.println(key + " ");
+			System.out.print(key + " ");
 		}
-		System.out.println("同时出现在两个文件中的交集单词词汇表有：");
+		System.out.println();
+		System.out.print("同时出现在两个文件中的交集单词词汇表有：");
 		Iterator<Entry<String, Integer>> it = map.entrySet().iterator();  
 		while (it.hasNext()) {  
 		    Map.Entry<String, Integer> entry = it.next(); 
 		    if(entry.getValue() == 2) {
-		    	System.out.println(entry.getKey() + " ");  
+		    	System.out.print(entry.getKey() + " ");  
 		    }
 		}  
-		System.out.println("两个文件词汇表中各自包含单词总数分别为：" + count1 + "," + count2);
+		System.out.println();
+		System.out.print("两个文件词汇表中各自包含单词总数分别为：" + count1 + "," + count2);
+		System.out.println();
 		
 	}
 }
